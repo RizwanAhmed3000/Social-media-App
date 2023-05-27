@@ -83,4 +83,59 @@ input:focus{
 #loginBtn:hover{
     background-color: rgb(87, 1, 128) !important;
 }
+#exampleModalLabel{
+    font-family: 'Righteous', cursive;
+    width: 100%;
+}
+.modal-header{
+    border-bottom: none !important;
+    text-align: center !important;
+}
+.modal-header .btn-close{
+    margin-left: 0px;
+}
+.dropdown-item:hover{
+    background-color: #198754 !important;
+    color: white !important;
+}
+#text-muted{
+    font-size: 13px;
+}
 
+
+/* SmartPhone Screen */
+
+@media(min-width: 320px) and (max-width: 500px) {
+    .logo h1{
+        font-size: 2rem;
+    }
+    .formContainer{
+        width: 100%;
+    }
+    #purpleBlob{
+        width: 250px !important;
+        right: 70px;
+    }
+    #greenBlob{
+        width: 360px !important;
+    }
+    #yellowBlob{
+        left: -88px !important;
+        bottom: 53px !important;
+    }
+    #redBlob{
+        width: 255px !important;
+        top: -55px !important;
+    }
+}
+
+/* Tablet Screen */
+
+@media(min-width: 501px) and (max-width: 768px) {
+    #purpleBlob{
+        right: 130px;
+    }
+    .formContainer{
+        width: 66%;
+    }
+}
