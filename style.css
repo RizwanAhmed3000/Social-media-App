@@ -63,6 +63,16 @@ body{
 .form p{
     margin-bottom: 5px;
 }
+.passDiv{
+    width: 70%;
+}
+
+.passDiv button{
+    height: fit-content;
+}
+.passDiv input{
+    width: 100%;
+}
 input{
     width: 70%;
     border-radius: 5px;
@@ -72,7 +82,9 @@ input{
     padding: 8px;
 }
 input:focus{
-    outline: 1px solid rgb(140, 1, 204);
+    outline: 1px solid rgb(140, 1, 204) !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
 }
 #email, #password, #flexCheckDefault{
     margin-bottom: 15px;
@@ -100,6 +112,7 @@ input:focus{
 }
 #text-muted{
     font-size: 13px;
+    color: red;
 }
 
 
