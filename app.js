@@ -10,8 +10,6 @@ const passwordBtn = document.querySelector('.passwordBtn')
 const creatAcctountBtn = document.querySelector('#creatAcctountBtn')
 let gender;
 
-console.log(email)
-console.log(password)
 
 
 
@@ -43,7 +41,8 @@ function loginHandler(){
 
     // console.log(isUserFound)
     if(isUserFound[0].emailAddress == email.value && isUserFound[0].Password == password.value){
-        alert(`hi, ${isUserFound[0].firstName}`)
+        localStorage.setItem('activeUser', JSON.stringify(isUserFound[0]))
+        window.location.href = "./Dashboard/index.html"
     } else{
         alert("wrong email or password")
     }
