@@ -55,7 +55,7 @@
                         Remember me
                     </label>
                 </div>
-                <button type="button" id="loginBtn" class="btn btn-success"
+                <button type="button" id="loginBtn" class="btn btn-success" onclick="loginHandler()"
                     style="background-color: rgb(140, 1, 204); border: none;">Log in</button>
                 <p>or</p>
                 <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
@@ -116,8 +116,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success" id="creatAcctountBtn"
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="emptyInput()">Close</button>
+                        <button type="button" class="btn btn-success" id="creatAcctountBtn" 
                             onclick="signupHandler()">Creat account</button>
                     </div>
                 </div>

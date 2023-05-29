@@ -2,14 +2,16 @@ const firstName = document.querySelector('#first-name')
 const lastName = document.querySelector('#last-name')
 const newPassword = document.querySelector('#new-password')
 const password = document.querySelector('#password')
-// console.log(password)
 const dateOfBirth = document.querySelector('#dateOfBirth')
 const emailAddress = document.querySelector('#email-address')
+const email = document.querySelector('#email')
 const passwordWarning = document.querySelector('.passwordWarning')
 const passwordBtn = document.querySelector('.passwordBtn')
+const creatAcctountBtn = document.querySelector('#creatAcctountBtn')
 let gender;
-// console.log(passwordBtn)
 
+console.log(email)
+console.log(password)
 
 
 
@@ -27,10 +29,40 @@ function showHide(p){
     }
 }
 
+function loginHandler(){
+    if(email.value == "" || password.value == ""){
+        return alert("bhai fill kar phly")
+    }
+    const isUserFound = users.filter((user)=>{
+        return user.emailAddress == email.value
+    })
+
+    if(!isUserFound.length){
+        return alert("User doesn't exisit")
+    }
+
+    // console.log(isUserFound)
+    if(isUserFound[0].emailAddress == email.value && isUserFound[0].Password == password.value){
+        alert(`hi, ${isUserFound[0].firstName}`)
+    } else{
+        alert("wrong email or password")
+    }
+
+}
+
+
 function signupHandler() {
+    
+    const isEmailFound = users.filter((user)=>{
+        return user.emailAddress == emailAddress.value
+    })
+
+    if(isEmailFound.length){
+        return alert("This email is already in use")
+    }
+
     if (firstName.value == "" || lastName.value == "" || emailAddress.value == "" || newPassword.value == "" || dateOfBirth.value == "" || gender == undefined) {
         alert("fill all the fields")
-
     } else {
         if (newPassword.value.length < 7) {
             passwordWarning.style.visibility = "visible"
@@ -62,10 +94,21 @@ function signupHandler() {
         dateOfBirth.value = ""
         dateOfBirth.value = ""
         gender = ""
-
+       
     }
 }
 
 function genderHandler(g) {
     gender = g
+}
+
+function emptyInput(){
+    firstName.value = ""
+    lastName.value = ""
+    emailAddress.value = ""
+    newPassword.value = ""
+    dateOfBirth.value = ""
+    dateOfBirth.value = ""
+    gender = ""
+   
 }
