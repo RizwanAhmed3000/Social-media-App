@@ -5,6 +5,7 @@ const password = document.querySelector('#password')
 const dateOfBirth = document.querySelector('#dateOfBirth')
 const emailAddress = document.querySelector('#email-address')
 const email = document.querySelector('#email')
+const phoneNumber = document.querySelector('#phoneNumber')
 const passwordWarning = document.querySelector('.passwordWarning')
 const passwordBtn = document.querySelector('.passwordBtn')
 const creatAcctountBtn = document.querySelector('#creatAcctountBtn')
@@ -60,7 +61,16 @@ function signupHandler() {
         return alert("This email is already in use")
     }
 
-    if (firstName.value == "" || lastName.value == "" || emailAddress.value == "" || newPassword.value == "" || dateOfBirth.value == "" || gender == undefined) {
+    const isPhoneNumFound = users.filter((user)=>{
+        return user.PhoneNumber == phoneNumber.value
+    })
+
+    if(isPhoneNumFound.length){
+        return alert("This phone number is already in use")
+    }
+
+
+    if (firstName.value == "" || lastName.value == "" || emailAddress.value == "" || newPassword.value == "" || dateOfBirth.value == "" || gender == undefined || phoneNumber.value == "") {
         alert("fill all the fields")
     } else {
         if (newPassword.value.length < 7) {
@@ -76,6 +86,7 @@ function signupHandler() {
         const usersDetails = {
             firstName: firstName.value,
             lastName: lastName.value,
+            PhoneNumber: phoneNumber.value,
             Password: newPassword.value,
             emailAddress: emailAddress.value,
             dateOfBirth: new Date(`${dateOfBirth.value}`),
@@ -88,6 +99,7 @@ function signupHandler() {
         alert("signup successfull")
         firstName.value = ""
         lastName.value = ""
+        phoneNumber.value = ""
         emailAddress.value = ""
         newPassword.value = ""
         dateOfBirth.value = ""
@@ -105,6 +117,7 @@ function emptyInput(){
     firstName.value = ""
     lastName.value = ""
     emailAddress.value = ""
+    phoneNumber.value = ""
     newPassword.value = ""
     dateOfBirth.value = ""
     dateOfBirth.value = ""
