@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acrlancer- LogIn or signUp</title>
+    <!-- <link rel="stylesheet" href="style02.css"> -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Assets/blobz.min.css">
+    <!-- <link rel="stylesheet" href="Assets/blobz.min.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -26,7 +27,7 @@
 
     <div class="Maincontainer">
         <div class="logo">
-            <h1>Acrlancer</h1>
+            <h1>Logo Here</h1>
         </div>
 
         <!-- Login Form -->
@@ -42,8 +43,8 @@
                 <p class="fw-bold">Password</p>
                 <div class="passDiv d-flex">
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                        <button class="btn btn-outline-success passwordBtn" onclick="showHide(password)" type="button"
+                        <input type="password" class="form-control " id="password" placeholder="Password">
+                        <button class="btn btn-outline-warning passwordBtn" onclick="showHide(password)" type="button"
                             id="button-addon2"><i class="fa-regular fa-eye"></i></button>
                     </div>
                     <!-- <input type="password" id="password" placeholder="Password">
@@ -51,14 +52,13 @@
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault" style="color: #fafafa;">
                         Remember me
                     </label>
                 </div>
-                <button type="button" id="loginBtn" class="btn btn-success" onclick="loginHandler()"
-                    style="background-color: rgb(140, 1, 204); border: none;">Log in</button>
+                <button type="button" id="loginBtn" class="btn btn-warning" onclick="loginHandler()">Log in</button>
                 <p>or</p>
-                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" id="creatBtn"
                     data-bs-target="#exampleModal" data-bs-whatever="@mdo">Creat new account</button>
 
             </div>
@@ -67,31 +67,35 @@
         <!-- Signup Modal -->
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
+            <div class="modal-dialog" >
+                <div class="modal-content" style="background-color: #282828; color: #fafafa;">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5 " id="exampleModalLabel">Sign up here</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" style="fill: #fafafa;" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">First name:</label>
-                                <input type="text" class="form-control" id="first-name">
+                                <input type="text" placeholder="First Name" class="form-control" id="first-name">
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-Last-name" class="col-form-label">Last name:</label>
-                                <input type="text" class="form-control" id="last-name">
+                                <input type="text" placeholder="Last Name" class="form-control" id="last-name">
                             </div>
                             <div class="mb-3">
                                 <label for="email-address" class="col-form-label">Email address:</label>
-                                <input type="email" class="form-control" id="email-address">
+                                <input type="email" placeholder="Email address" class="form-control" id="email-address">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email-address" class="col-form-label">Phone Number:</label>
+                                <input type="email" placeholder="Phone Number" class="form-control" id="phoneNumber">
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="col-form-label">New password:</label>
                                 <div class="input-group mb-3">
-                                    <input type="password" class="form-control" id="new-password">
-                                    <button class="btn btn-outline-success passwordBtn" onclick="showHide(newPassword)"
+                                    <input type="password" placeholder="New Password" class="form-control" id="new-password">
+                                    <button class="btn btn-outline-warning passwordBtn" onclick="showHide(newPassword)"
                                         type="button" id="button-addon2"><i class="fa-regular fa-eye"></i></button>
                                 </div>
                                 <p class=" passwordWarning" id="text-muted">Must contain 8 or mor characters</p>
@@ -117,14 +121,14 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="emptyInput()">Close</button>
-                        <button type="button" class="btn btn-success" id="creatAcctountBtn" 
+                        <button type="button" class="btn btn-warning" id="creatAcctountBtn" 
                             onclick="signupHandler()">Creat account</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="background">
+        <!-- <div class="background">
             <div class="tk-blob" style="width: 480px;--time: 30s;" id="purpleBlob">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440.7 428.7">
                     <path
@@ -159,7 +163,7 @@
                 </svg>
             </div>
 
-        </div>
+        </div> -->
 
 
 
