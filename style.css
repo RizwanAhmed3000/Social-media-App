@@ -152,6 +152,15 @@ input:focus {
 
     .formContainer {
         width: 100%;
+        height: 80vh;
+    }
+
+    #email{
+        width: 90% !important;
+    }
+
+    .passDiv{
+        width: 90%;
     }
 
     #purpleBlob {
