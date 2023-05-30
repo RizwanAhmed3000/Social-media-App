@@ -1,9 +1,15 @@
 const activeUser = JSON.parse(localStorage.getItem('activeUser'))
 
-const h1 = document.getElementsByTagName('h1')
+const userName = document.querySelector('.name')
+const logoutBtn = document.querySelector('.logoutBtn')
 
-if(!activeUser){
+if (!activeUser) {
     window.location.href = "../index.html"
 }
 
-h1[0].innerText = `${activeUser.firstName}`
+function logoutHandler() {
+    localStorage.removeItem('activeUser')
+    window.location.href = "../index.html"
+}
+
+userName.textContent = `${activeUser.firstName}`
