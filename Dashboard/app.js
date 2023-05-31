@@ -1,6 +1,7 @@
 const activeUser = JSON.parse(localStorage.getItem('activeUser'))
 
-const userName = document.querySelector('.name')
+const userName = document.querySelector('.username')
+const userTag = document.querySelector('.userTag')
 const logoutBtn = document.querySelector('.logoutBtn')
 
 if (!activeUser) {
@@ -13,3 +14,4 @@ function logoutHandler() {
 }
 
 userName.textContent = `${activeUser.firstName}`
+userTag.textContent = `@${activeUser.firstName}`
