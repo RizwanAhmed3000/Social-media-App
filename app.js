@@ -44,6 +44,9 @@ function loginHandler(){
     if(isUserFound[0].emailAddress == email.value && isUserFound[0].Password == password.value){
         localStorage.setItem('activeUser', JSON.stringify(isUserFound[0]))
         window.location.href = "./Dashboard/index.html"
+        email.value = ""
+        password.value = ""
+
     } else{
         alert("wrong email or password")
     }
