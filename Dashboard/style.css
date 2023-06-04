@@ -146,6 +146,10 @@ body {
     width: 100% !important ;
 }
 
+#post-text{
+    word-wrap: break-word;
+}
+
 
 #comment{
     background-color: #222;
