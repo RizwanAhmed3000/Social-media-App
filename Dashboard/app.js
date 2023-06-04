@@ -12,8 +12,6 @@ console.log(postTextArea)
 
 
 
-
-
 if (!activeUser) {
     window.location.href = "../index.html"
 }

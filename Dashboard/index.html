@@ -116,17 +116,18 @@
                             style="background-color: #222222;">Creat a new post</button>
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
-                            <div class="modal-dialog" >
+                            <div class="modal-dialog">
                                 <div class="modal-content" style="background-color: #282828 !important;">
                                     <div class="modal-header">
                                         <div class="modal-header-container d-flex align-items-center">
                                             <div class="image">
                                                 <img src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?w=740&t=st=1685543404~exp=1685544004~hmac=d07ea3ce3ef8f3935685c31c8166ad233839e12607dfb08424f2e5a129f3d691"
-                                                 alt="" class="img-fluid rounded mx-auto d-block">
+                                                    alt="" class="img-fluid rounded mx-auto d-block">
                                             </div>
                                             <div class="userName-id ms-2">
                                                 <h5 class="mb-1 username">Username</h5>
-                                                <p class="mb-1 userTag" style="color: #868686; font-size: 12px;">@Username</p>
+                                                <p class="mb-1 userTag" style="color: #868686; font-size: 12px;">
+                                                    @Username</p>
                                             </div>
                                         </div>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -135,14 +136,17 @@
                                     <div class="modal-body">
                                         <form>
                                             <div class="mb-3">
-                                                <textarea class="form-control" id="message-text" style="height: 250px; background-color: #282828;" placeholder="What do you want to talk about"></textarea>
+                                                <textarea class="form-control" id="message-text"
+                                                    style="height: 250px; background-color: #282828;"
+                                                    placeholder="What do you want to talk about"></textarea>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="button" data-bs-dismiss="modal" class="btn btn-warning" onclick="postHandler()">Post</button>
+                                        <button type="button" data-bs-dismiss="modal" class="btn btn-warning"
+                                            onclick="postHandler()">Post</button>
                                     </div>
                                 </div>
                             </div>
@@ -166,8 +170,59 @@
                 </div>
             </div>
 
+
+
             <!-- main post ka area -->
+
+
+
             <div class="postArea">
+                <!-- <div class="postConatiner postInputContainer mt-3">
+                    <div class="authorsDetails d-flex align-items-center">
+                        <div class="post-header-container d-flex align-items-center">
+                            <div class="image">
+                                <img src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?w=740&t=st=1685543404~exp=1685544004~hmac=d07ea3ce3ef8f3935685c31c8166ad233839e12607dfb08424f2e5a129f3d691"
+                                    alt="" class="img-fluid rounded mx-auto d-block">
+                            </div>
+                            <div class="userName-id ms-2">
+                                <p class="mb-1 userTag" style="color: #868686; font-size: 12px;">
+                                    @${activeUser.firstName}</p>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <h5 class="mb-1 username">${activeUser.firstName}</h5>
+                                    <p class="mb-0 ms-2" style="color: #ffc107; font-size: 12px;">1 hour</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="postDetails">
+                        <p id="post-text" class="mt-2">${postTextArea.value}</p>
+                    </div>
+                    <div class="postImage-video">
+                        <img src="https://images.unsplash.com/photo-1635016288720-c52507b9a717?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
+                            alt="" class="img-fluid" style="object-fit: cover; width: 100%; border-radius: 15px;">
+                    </div>
+                    <div class="like-comment-share d-flex justify-content-start align-items-center mt-3">
+                        <i class="fa-solid fa-heart ms-3 fs-5"></i>
+                        <i class="fa-solid fa-comment ms-3 fs-5"></i>
+                        <i class="fa-solid fa-share ms-3 fs-5"></i>
+                    </div>
+                    <div
+                        class="comment-container d-flex align-items-center mt-3 border-top border-secondary-subtle pt-2">
+                        <div class="image">
+                            <img src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?w=740&t=st=1685543404~exp=1685544004~hmac=d07ea3ce3ef8f3935685c31c8166ad233839e12607dfb08424f2e5a129f3d691"
+                                alt="" class="img-fluid rounded mx-auto d-block">
+                        </div>
+                        <div class="search ps-3 " style="width: 100%;">
+                            <div class="input-group" style="width: 100%;">
+                                <input type="text" class="form-control" placeholder="Write your comment"
+                                    aria-label="Example text with button addon" aria-describedby="button-addon1"
+                                    id="comment">
+                                <button class="btn " type="button" id="button-addon1" style="background-color: #222;"><i
+                                        class="fa-solid fa-paper-plane" style="color: #636363;"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
 
@@ -178,7 +233,7 @@
 
 
 
-        
+
         <div class="right">
             <h1>activity coming soon</h1>
         </div>
