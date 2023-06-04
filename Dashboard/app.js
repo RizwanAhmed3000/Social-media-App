@@ -89,7 +89,9 @@ function postHandler() {
     </div>
 </div>`
 
-    postArea.appendChild(div)
+
+    postArea.prepend(div)
+
     const postObj = {
         userEmail : activeUser.emailAddress,
         post : div.innerHTML,
