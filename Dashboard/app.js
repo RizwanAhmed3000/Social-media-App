@@ -1,4 +1,7 @@
 const activeUser = JSON.parse(localStorage.getItem('activeUser'))
+const activeUserData = JSON.parse(localStorage.getItem('activeUserData')) || []
+
+
 
 const userName = document.querySelectorAll('.username')
 const userTag = document.querySelectorAll('.userTag')
@@ -6,6 +9,10 @@ const logoutBtn = document.querySelector('.logoutBtn')
 const postArea = document.querySelector('.postArea')
 const postTextArea = document.querySelector('#message-text')
 console.log(postTextArea)
+
+
+
+
 
 if (!activeUser) {
     window.location.href = "../index.html"
@@ -16,11 +23,24 @@ function logoutHandler() {
     window.location.href = "../index.html"
 }
 
+
+
 userName.forEach((user) => {
     return user.textContent = `${activeUser.firstName}`
 })
 userTag.forEach((user) => {
     return user.textContent = `@${activeUser.firstName}`
+})
+
+activeUserData.forEach((item)=>{
+    if(activeUser.emailAddress == item.userEmail ){
+        let div = document.createElement('div')
+        div.setAttribute('class', 'postConatiner postInputContainer mt-3')
+        div.innerHTML = item.post
+        postArea.appendChild(div)
+    } else {
+        return
+    }
 })
 
 function postHandler() {
@@ -69,6 +89,17 @@ function postHandler() {
     </div>
 </div>`
 
-postArea.appendChild(div)
+    postArea.appendChild(div)
+    const postObj = {
+        userEmail : activeUser.emailAddress,
+        post : div.innerHTML,
+    }
+    activeUserData.unshift(postObj)
+    localStorage.setItem('activeUserData', JSON.stringify(activeUserData))
+    // console.log(activeUserData)
+    // console.log(activeUserData[0].post)
+    postTextArea.value = ""
 
 }
+
+// console.log(activeUserData[0])
