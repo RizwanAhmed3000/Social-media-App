@@ -28,7 +28,7 @@ myProfileBtn.addEventListener('click', ()=>{
 
 
 userName.forEach((user) => {
-    return user.textContent = `${activeUser.firstName}`
+    return user.textContent = `${activeUser.firstName} ${activeUser.lastName}`
 })
 userTag.forEach((user) => {
     return user.textContent = `@${activeUser.firstName}`
