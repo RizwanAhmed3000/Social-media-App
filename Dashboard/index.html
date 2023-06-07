@@ -36,6 +36,7 @@
             <div class="container-fluid navigation d-flex justify-content-center align-items-center">
                 <a href="#"><i class="fa-solid fa-house px-4 fs-5"></i></a>
                 <a href="#"><i class="fa-regular fa-comment px-4 fs-5"></i></a>
+                <a href="../myProfile/index.html"><i class="fa-solid fa-user px-4 fs-5"></i></i></a>
                 <a href="#"><i class="fa-regular fa-bell px-4 fs-5"></i></a>
                 <a href="#"><i class="fa-regular fa-heart px-4 fs-5"></i></a>
             </div>
@@ -47,7 +48,7 @@
                         Username
                     </button>
                     <ul class="dropdown-menu" style="background-color: #282828;">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="../myProfile/index.html">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><a class="dropdown-item logoutBtn" onclick="logoutHandler()" href="">Log out</a></li>
                     </ul>
@@ -178,19 +179,34 @@
 
             <div class="postArea">
                 <!-- <div class="postConatiner postInputContainer mt-3">
-                    <div class="authorsDetails d-flex align-items-center">
-                        <div class="post-header-container d-flex align-items-center">
-                            <div class="image">
-                                <img src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?w=740&t=st=1685543404~exp=1685544004~hmac=d07ea3ce3ef8f3935685c31c8166ad233839e12607dfb08424f2e5a129f3d691"
-                                    alt="" class="img-fluid rounded mx-auto d-block">
-                            </div>
-                            <div class="userName-id ms-2">
-                                <p class="mb-1 userTag" style="color: #868686; font-size: 12px;">
-                                    @${activeUser.firstName}</p>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <h5 class="mb-1 username">${activeUser.firstName}</h5>
-                                    <p class="mb-0 ms-2" style="color: #ffc107; font-size: 12px;">1 hour</p>
+                    <div class="d-flex justify-content-between ">
+                        <div class="authorsDetails d-flex align-items-center">
+                            <div class="post-header-container d-flex align-items-center">
+                                <div class="image">
+                                    <img src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?w=740&t=st=1685543404~exp=1685544004~hmac=d07ea3ce3ef8f3935685c31c8166ad233839e12607dfb08424f2e5a129f3d691"
+                                        alt="" class="img-fluid rounded mx-auto d-block">
                                 </div>
+                                <div class="userName-id ms-2">
+                                    <p class="mb-1 userTag" style="color: #868686; font-size: 12px;">
+                                        @${activeUser.firstName}</p>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <h5 class="mb-1 username">${activeUser.firstName}</h5>
+                                        <p class="mb-0 ms-2" style="color: #ffc107; font-size: 12px;">1 hour</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle"
+                                    style="background-color: #282828; border-color: #282828;" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu" style="background-color: #282828;">
+                                    <li><a class="dropdown-item">Edit</a></li>
+                                    <li><a class="dropdown-item">Delete</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
