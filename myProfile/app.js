@@ -8,7 +8,6 @@ const userTag = document.querySelectorAll('.userTag')
 const logoutBtn = document.querySelector('.logoutBtn')
 const postArea = document.querySelector('.postArea')
 const postTextArea = document.querySelector('#message-text')
-const myProfileBtn = document.querySelector('.myProfileBtn')
 console.log(postTextArea)
 
 
@@ -22,13 +21,13 @@ function logoutHandler() {
     window.location.href = "../index.html"
 }
 
-myProfileBtn.addEventListener('click', ()=>{
-    window.location.href = "../myProfile/index.html"
-})
+// myProfileBtn.addEventListener('click', ()=>{
+//     window.location.href = "../myProfile/index.html"
+// })
 
 
 userName.forEach((user) => {
-    return user.textContent = `${activeUser.firstName}`
+    return user.textContent = `${activeUser.firstName} ${activeUser.lastName}`
 })
 userTag.forEach((user) => {
     return user.textContent = `@${activeUser.firstName}`

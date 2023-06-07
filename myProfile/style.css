@@ -59,16 +59,17 @@ body {
     border-radius: 15px;
 }
 
+.left{
+    width: 100%;
+}
+
 .mid{
-    width: 50%;
+    width: 60%;
     margin: 0px 15px;
 }
-.left,
-.right{
-    width: 30%;
-    padding: 0px 10px;
-    /* margin: 0px 15px; */
-}
+
+
+
 
 .profile{
     background-color: #282828 !important;
@@ -79,8 +80,10 @@ body {
     background-color: #1a1a1a;
     border-radius: 10px;
     border: 8px solid #1a1a1a;
+    width: 150px;
+    height: 150px;
     position: absolute;
-    top: 25%;
+    top: 37%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -157,9 +160,8 @@ body {
 @media(max-width: 1024px){
     .profile{
         width: 100% !important;
-        height: 70% !important;
+        height: 530px !important;
     }
-    .left,
     .right{
         padding: 0;
     }
